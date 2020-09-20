@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from 'react-router-dom'
 import { Avatar } from 'antd'
 
@@ -23,6 +23,8 @@ const navLinks = [
 
 export default function Navigation({ user }) {
     const [menuActive, setMenuActive] = useState(false)
+   
+
     return (
         <nav className="site-navigation">
             <span className="menu-title">My React Blog</span>

@@ -1,11 +1,15 @@
 .site-navigation {
     height: 65px;
-    width: 100%;
     background: white;
+    width: 100%;
     display: flex;
+    position: fixed;
+    transition: top 0.3s;
+    top:0;
     justify-content: space-between;
     color: $text-color;
-
+    z-index: 100;
+    
     .menu-title {
         font-weight: 400;
         font-size: 24px;
@@ -62,13 +66,17 @@
     }
 }
 
+.site-navigation--hidden {
+    top: -50px;
+  }
+
 @media screen and (max-width: 900px){
     .site-navigation{
         .menu-content-container{
             width: 300px;
             height: calc(100%-65px);
             background: white;
-            position: absolute;
+            position: fixed;
             top: 65px;
             left:-300px ;
             transition: 300ms ease left;
